@@ -28,7 +28,7 @@ const Reels = ({ src, onWatched }) => {
                 playsInline
             />
 
-            <div className="absolute right-4 bottom-60 flex flex-col items-center gap-4 text-white">
+            <div className="absolute right-4 bottom-40 flex flex-col items-center gap-4 text-white">
                 <button className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition">
                     <Heart className="w-6 h-6" />
                 </button>
