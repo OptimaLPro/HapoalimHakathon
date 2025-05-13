@@ -28,7 +28,10 @@ const chartConfig = {
 
 export function Component() {
   return (
-    <Card className="flex flex-col border-0 shadow-none bg-transparent" dir="rtl">
+    <Card
+      className="flex flex-col border-0 shadow-none bg-transparent"
+      dir="rtl"
+    >
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
@@ -63,7 +66,7 @@ export function Component() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy}
-                          className="fill-foreground text-4xl font-bold"
+                          className="fill-foreground text-2xl font-bold"
                         >
                           {chartData[0].visitors.toLocaleString()}
                         </tspan>
