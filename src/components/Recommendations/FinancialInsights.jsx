@@ -59,6 +59,12 @@ const FinancialInsights = ({ balance = -420, avgMonthlySpend = 3200 }) => {
 
   const insights = [
     {
+      icon: "💡",
+      color: "green",
+      title: "AI מציעה לך יעד חודשי חדש",
+      text: "חסוך בחודש הבא קניות מוולט וצבור 1000 נקודות",
+    },
+    {
       icon: "📊",
       color: "red",
       title: "יש פוטנציאל לשיפור 💪",

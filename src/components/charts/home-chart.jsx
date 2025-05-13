@@ -61,19 +61,15 @@ export function Component() {
                         x={viewBox.cx}
                         y={viewBox.cy}
                         textAnchor="middle"
-                        dominantBaseline="middle"
+                        className="fill-foreground font-bold"
                       >
-                        <tspan
-                          x={viewBox.cx}
-                          y={viewBox.cy}
-                          className="fill-foreground text-2xl font-bold"
-                        >
+                        <tspan className="text-2xl" x={viewBox.cx} dy="-0.3em">
                           {chartData[0].visitors.toLocaleString()}
                         </tspan>
                         <tspan
+                          className="fill-muted-foreground text-base"
                           x={viewBox.cx}
-                          y={(viewBox.cy || 0) + 24}
-                          className="fill-muted-foreground"
+                          dy="1.6em" // כאן המרווח כלפי מטה — כמו mt-2
                         >
                           יעד
                         </tspan>
@@ -91,7 +87,7 @@ export function Component() {
           עלייה של 10% החודש <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none rtl text-white">
-          אתה ממש קרוב ליעד החודשי שלך!{" "}
+          אתה ממש קרוב ליעד הצבירה החודשי שלך!{" "}
         </div>
       </CardFooter>
     </Card>

@@ -73,7 +73,7 @@ const ReelsPage = () => {
 
       <div className="fixed top-20 right-4 z-50 flex items-center gap-2 bg-[#ed1d24] text-white text-base font-semibold px-4 py-2 rounded-full shadow-lg border border-red-700">
         <LiaCoinsSolid className="w-6 h-6" />
-        מטבעות: {score}
+        נקודות: {score}
       </div>
     </div>
   );
