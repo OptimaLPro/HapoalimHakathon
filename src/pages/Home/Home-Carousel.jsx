@@ -70,7 +70,7 @@ export function HomeCarousel() {
                     className="object-cover w-full h-full rounded-xl"
                   />
                   <div className="absolute bottom-4 right-4 bg-[#ed1d24] text-white text-sm px-3 py-1 rounded-full shadow-md">
-                    {item.coins} מטבעות
+                    {item.coins} נקודות
                   </div>
                 </div>
               </DialogTrigger>
