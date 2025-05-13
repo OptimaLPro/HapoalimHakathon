@@ -2,6 +2,7 @@ import {
   BriefcaseBusiness,
   ChartSpline,
   Home,
+  LucideSearch,
   Settings,
   Telescope,
 } from "lucide-react";
@@ -23,7 +24,7 @@ const Navbar = () => {
       </Link>
       <Link to="/reels">
         <div>
-          <Telescope />
+          <LucideSearch />
         </div>
       </Link>
       <Link to="/analysis">

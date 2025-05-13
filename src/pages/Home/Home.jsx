@@ -46,7 +46,7 @@ const Home = () => {
           </span>
           <div className="text-[50px] mt-2 flex items-center justify-center">
             <LiaCoinsSolid className="w-12 h-12" />
-            מטבעות
+            נקודות
           </div>
         </motion.div>
 
