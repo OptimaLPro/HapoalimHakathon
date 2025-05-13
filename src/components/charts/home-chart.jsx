@@ -28,7 +28,7 @@ const chartConfig = {
 
 export function Component() {
   return (
-    <Card className="flex flex-col border-0 shadow-none" dir="rtl">
+    <Card className="flex flex-col border-0 shadow-none bg-transparent" dir="rtl">
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
@@ -83,11 +83,11 @@ export function Component() {
           </RadialBarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col gap-2 text-sm">
+      <CardFooter className="flex-col gap-2 text-sm text-white">
         <div className="flex items-center gap-2 font-medium leading-none rtl">
           עלייה של 10% החודש <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-muted-foreground rtl">
+        <div className="leading-none rtl text-white">
           אתה ממש קרוב ליעד החודשי שלך!{" "}
         </div>
       </CardFooter>
