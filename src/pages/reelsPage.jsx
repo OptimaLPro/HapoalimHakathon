@@ -5,13 +5,17 @@ import { LiaCoinsSolid } from "react-icons/lia";
 const videos = [
     "/videos/1.mp4",
     "/videos/2.mp4",
-    "/videos/3.mp4"
+    "/videos/3.mp4",
+    "/videos/4.mp4",
+    "/videos/5.mp4",
+    "/videos/6.mp4",
+    "/videos/7.mp4",
 ];
 
 const ReelsPage = () => {
-    const [score, setScore] = useState(23);
+    const [score, setScore] = useState(750);
     const [viewed, setViewed] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(0); // מונע קפיצות כפולות
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const containerRef = useRef(null);
     const reelRefs = useRef([]);
@@ -29,7 +33,7 @@ const ReelsPage = () => {
                 entries.forEach((entry) => {
                     const index = reelRefs.current.findIndex((el) => el === entry.target);
 
-                    // רק אם נכנס 40% ומדובר בריל חדש וקדימה — נגלול אליו
+
                     if (entry.isIntersecting && index > currentIndex) {
                         setCurrentIndex(index);
                         entry.target.scrollIntoView({ behavior: "smooth" });
