@@ -13,7 +13,7 @@ const videos = [
 ];
 
 const ReelsPage = () => {
-    const [score, setScore] = useState(23);
+    const [score, setScore] = useState(750);
     const [viewed, setViewed] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
