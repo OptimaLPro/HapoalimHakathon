@@ -5,6 +5,8 @@ import {
   LucideSearch,
   Settings,
   Telescope,
+  TicketPercent,
+  TvMinimalPlay,
 } from "lucide-react";
 import React from "react";
 import { Link } from "react-router";
@@ -17,17 +19,17 @@ const Navbar = () => {
           <Home />
         </div>
       </Link>
-      <Link to="/business">
+      <Link to="/deals">
         <div>
-          <BriefcaseBusiness />
+          <TicketPercent />
         </div>
       </Link>
       <Link to="/reels">
         <div>
-          <LucideSearch />
+          <TvMinimalPlay />
         </div>
       </Link>
-      <Link to="/analysis">
+      <Link to="/recommendations">
         <div>
           <ChartSpline />
         </div>
