@@ -1,11 +1,15 @@
 import "./App.css";
+import Header from "./components/Header/Header";
 import { Button } from "./components/ui/button";
+import Router from "../Router";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <Button>Hello</Button>
-      Hey How are you?
+      <Header />
+      <Router />
+      <Navbar />
     </>
   );
 }
