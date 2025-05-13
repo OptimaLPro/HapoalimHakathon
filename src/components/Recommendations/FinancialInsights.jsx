@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import SpendingCharts from "./SpendingCharts";
 
 const FinancialInsights = ({ balance = -420, avgMonthlySpend = 3200 }) => {
-
     const potentialSaving = Math.max(0, Math.floor((avgMonthlySpend * 0.1) / 10) * 10);
 
     const tip =
@@ -32,60 +31,88 @@ const FinancialInsights = ({ balance = -420, avgMonthlySpend = 3200 }) => {
         })
     };
 
+    const colorClasses = {
+        red: {
+            bg: "from-red-50",
+            border: "border-red-500",
+            text: "text-red-600",
+        },
+        green: {
+            bg: "from-green-50",
+            border: "border-green-500",
+            text: "text-green-600",
+        },
+        blue: {
+            bg: "from-blue-50",
+            border: "border-blue-500",
+            text: "text-blue-600",
+        },
+        purple: {
+            bg: "from-purple-50",
+            border: "border-purple-500",
+            text: "text-purple-600",
+        },
+    };
+
+    const insights = [
+        {
+            icon: "📊",
+            color: "red",
+            title: "יש פוטנציאל לשיפור 💪",
+            text: "בקרב סטודנטים בגילך שמשלמים שכר דירה, ממוצע ההוצאות על מזון ובילויים נמוך בכ־15%. לפי הנתונים שלך, ההוצאות על וולט ומסעדות גבוהות מהמקובל — צמצום קל שם יכול להחזיר אותך לאיזון."
+        },
+        {
+            icon: "💡",
+            color: "green",
+            title: "חיסכון חכם",
+            text: `אם תצמצם רק 15 ש״ח בשבוע – תוכל לחסוך ₪${potentialSaving} החודש. קל.`
+        },
+        {
+            icon: "📍",
+            color: "blue",
+            title: "מה כדאי לעשות עכשיו?",
+            text: tip
+        },
+        {
+            icon: "🔍",
+            color: "purple",
+            title: "תובנות מהשטח",
+            text: (
+                <>
+                    <ul className="list-disc pl-5 space-y-2 text-sm">
+                        <li>רוב הסטודנטים בגילך שחיים בשכירות מצליחים לחסוך לפחות 100 ש"ח בחודש רק על צמצום הזמנות וולט.</li>
+                        <li>3 מתוך 4 משתמשים עם פרופיל דומה התחילו לחסוך בעזרת תזכורת שבועית אוטומטית להפקדה לחיסכון.</li>
+                        <li>סטודנטים שנרשמו למנוי קבוע בקפיטריה דיווחו על ירידה של כ־20% בהוצאות החודשיות על מזון.</li>
+                    </ul>
+                    <button className="mt-2 text-sm text-purple-600 underline">הפעל תזכורת חכמה</button>
+                </>
+            )
+        }
+    ];
+
     return (
         <div className="p-6 bg-white rounded-lg shadow-md space-y-5">
             <h2 className="text-xl font-bold">המלצות פיננסיות עבורך</h2>
 
-            {[
-                {
-                    icon: "📊",
-                    color: "red",
-                    title: "יש פוטנציאל לשיפור 💪",
-                    text: "בקרב סטודנטים בגילך שמשלמים שכר דירה, ממוצע ההוצאות על מזון ובילויים נמוך בכ־15%. לפי הנתונים שלך, ההוצאות על וולט ומסעדות גבוהות מהמקובל — צמצום קל שם יכול להחזיר אותך לאיזון."
-                },
-                {
-                    icon: "💡",
-                    color: "green",
-                    title: "חיסכון חכם",
-                    text: `אם תצמצם רק 15 ש״ח בשבוע – תוכל לחסוך ₪${potentialSaving} החודש. קל.`
-                },
-                {
-                    icon: "📍",
-                    color: "blue",
-                    title: "מה כדאי לעשות עכשיו?",
-                    text: tip
-                },
-                {
-                    icon: "🔍",
-                    color: "purple",
-                    title: "תובנות מהשטח",
-                    text: (
-                        <>
-                            <ul className="list-disc pl-5 space-y-2 text-sm">
-                                <li>רוב הסטודנטים בגילך שחיים בשכירות מצליחים לחסוך לפחות 100 ש\"ח בחודש רק על צמצום הזמנות וולט.</li>
-                                <li>3 מתוך 4 משתמשים עם פרופיל דומה התחילו לחסוך בעזרת תזכורת שבועית אוטומטית להפקדה לחיסכון.</li>
-                                <li>סטודנטים שנרשמו למנוי קבוע בקפיטריה דיווחו על ירידה של כ־20% בהוצאות החודשיות על מזון.</li>
-                            </ul>
-                            <button className="mt-2 text-sm text-purple-600 underline">הפעל תזכורת חכמה</button>
-                        </>
-                    )
-                }
-            ].map((item, i) => (
-                <motion.div
-                    key={item.title}
-                    custom={i}
-                    variants={fadeIn}
-                    initial="hidden"
-                    animate="visible"
-                    className={`bg-gradient-to-r from-${item.color}-50 to-white border-l-4 border-${item.color}-500 p-4 rounded shadow flex items-start gap-3`}
-                >
-                    <span className={`text-${item.color}-600 text-xl`}>{item.icon}</span>
-                    <div className="text-sm text-gray-800 leading-tight">
-                        <p className="font-semibold">{item.title}</p>
-                        <p className="mt-1">{item.text}</p>
-                    </div>
-                </motion.div>
-            ))}
+            {insights.map((item, i) => {
+                const style = colorClasses[item.color];
+                return (
+                    <motion.div
+                        key={item.title}
+                        custom={i}
+                        variants={fadeIn}
+                        initial="hidden"
+                        animate="visible"
+                        className={`bg-gradient-to-r ${style.bg} to-white border-l-4 ${style.border} p-4 rounded shadow flex items-start gap-3`}
+                    >
+                        <span className={`${style.text} text-xl`}>{item.icon}</span>
+                        <div className="text-sm text-gray-800 leading-tight">
+                            <p className="font-semibold">{item.title}</p>
+                            <p className="mt-1">{item.text}</p>
+                        </div>
+                    </motion.div>
+                );
+            })}
 
             <SpendingCharts />
 
