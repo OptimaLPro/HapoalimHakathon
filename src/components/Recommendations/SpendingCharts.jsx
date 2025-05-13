@@ -19,7 +19,7 @@ const data = [
 ];
 
 
-const COLORS = ["#d13b3b", "#f57c7c", "#7edc8f", "#c1f2c7"];
+const COLORS = ["#b91c1c", "#ef4444", "#fca5a5", "#e5e7eb"];
 
 const renderCustomizedLabel = ({
                                    cx, cy, midAngle, outerRadius, name, value
