@@ -21,7 +21,7 @@ const Navbar = () => {
           <BriefcaseBusiness />
         </div>
       </Link>
-      <Link to="/explore">
+      <Link to="/reels">
         <div>
           <Telescope />
         </div>

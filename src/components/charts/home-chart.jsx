@@ -9,32 +9,26 @@ import {
   RadialBarChart,
 } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
+
 const chartData = [
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
+  { browser: "safari", visitors: 1000, fill: "var(--color-safari)" },
 ];
 
 const chartConfig = {
   visitors: {
-    label: "Visitors",
+    label: "מבקרים",
   },
   safari: {
-    label: "Safari",
+    label: "ספארי",
     color: "hsl(var(--chart-2))",
   },
 };
 
 export function Component() {
   return (
-    <Card className="flex flex-col ">
+    <Card className="flex flex-col border-0 shadow-none" dir="rtl">
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
@@ -90,11 +84,11 @@ export function Component() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex items-center gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+        <div className="flex items-center gap-2 font-medium leading-none rtl">
+          עלייה של 10% החודש <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
+        <div className="leading-none text-muted-foreground rtl">
+          אתה ממש קרוב ליעד החודשי שלך!{" "}
         </div>
       </CardFooter>
     </Card>
