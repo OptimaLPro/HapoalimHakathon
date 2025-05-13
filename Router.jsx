@@ -4,14 +4,16 @@ import { Route, Routes } from "react-router";
 import ReelsPage from "@/pages/reelsPage.jsx";
 import Settings from "@/pages/Settings/Settings";
 import JobSearchPage from "@/pages/JobSearchPage.jsx";
+import FinancialRecommendationsPage from "@/pages/FinancialRecommendationsPage.jsx";
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/reels" element={<ReelsPage />} />
       <Route path="/settings" element={<Settings />} />
-      <Route path="/jobs" element={<JobSearchPage />} />
+        <Route path="/reels" element={<ReelsPage />} />
+        <Route path="/jobs" element={<JobSearchPage />} />
+      <Route path="/recommendations" element={<FinancialRecommendationsPage />} />
     </Routes>
   );
 };
