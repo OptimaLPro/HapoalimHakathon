@@ -76,7 +76,7 @@ const Deals = () => {
               <Dialog key={i}>
                 <DialogTrigger asChild>
                   <Card className="cursor-pointer hover:shadow-lg transition-all">
-                    <img src={item.image} alt={item.title} className="w-full h-40 object-cover rounded-t" />
+                    <img src={item.image} alt={item.title} className="w-full h-40 object-cover rounded-t-xl" />
                     <CardHeader>
                       <CardTitle className="rtl text-right text-lg">{item.title}</CardTitle>
                       <CardDescription className="rtl text-right">{item.desc}</CardDescription>

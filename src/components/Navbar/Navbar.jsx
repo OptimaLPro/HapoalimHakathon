@@ -34,11 +34,11 @@ const Navbar = () => {
           <ChartSpline />
         </div>
       </Link>
-      <Link to="/settings">
+      {/* <Link to="/settings">
         <div>
           <Settings />
         </div>
-      </Link>
+      </Link> */}
     </div>
   );
 };

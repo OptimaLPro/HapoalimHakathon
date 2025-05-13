@@ -61,9 +61,25 @@ const Home = () => {
         </motion.div>
       </Card>
 
+      <motion.div
+        className="text-center flex flex-col mt-14 w-[88%]"
+        variants={fadeInUp(1.2)}
+        initial="hidden"
+        animate="visible"
+      >
+        <Card className="bg-white/90 backdrop-blur-md p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 text-right rtl">
+          <h3 className="text-xl font-semibold mb-2">💡 הטיפ היומי</h3>
+          <div className="text-md text-muted-foreground">
+            לפני שאתה קונה משהו – תן לו "לילה אחד". ראית אוזניות ב-399 נקודות?
+            עזוב, תן לזה לילה. אם מחר אתה עדיין בקטע – תקנה. אם שכחת – הרווחת גם
+            נקודות וגם שקט בנשמה. 😌
+          </div>
+        </Card>
+      </motion.div>
+
       {/* Benefits carousel */}
       <motion.div
-        className="text-center flex flex-col leading-15 mt-10"
+        className="text-center flex flex-col leading-15 mt-4"
         variants={fadeInUp(1.2)}
         initial="hidden"
         animate="visible"
