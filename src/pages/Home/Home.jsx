@@ -63,13 +63,46 @@ const Home = () => {
 
       <motion.div
         className="text-center flex flex-col mt-14 w-[88%]"
+        variants={fadeInUp(0.9)}
+        initial="hidden"
+        animate="visible"
+      >
+        <Card className="bg-white/90 backdrop-blur-md p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300  text-right">
+          <h3 className="text-xl font-semibold mb-4"> היסטוריית נקודות 📊</h3>
+          <div className="space-y-3 text-lg text-muted-foreground">
+            <div className="flex justify-between">
+              <span className="text-green-600 font-semibold">+200</span>
+              <span className="rtl ">12.4.25 מתנה על הרשמה</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-green-600 font-semibold">+50</span>
+              <span className="rtl">18.4.25 החזר על אוכל בחוץ</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-red-600 font-semibold">-200</span>
+              <span className="rtl">25.4.25 רכישת הטבה: מנוי ChatGPT</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-green-600 font-semibold">+300</span>
+              <span className="rtl">28.4.25 השתתפות באירוע סטודנטים</span>
+            </div>
+            <div className="flex justify-between border-t pt-3 mt-3 font-bold text-lg ">
+              <span>750</span>
+              <span>סה"כ נקודות</span>
+            </div>
+          </div>
+        </Card>
+      </motion.div>
+
+      <motion.div
+        className="text-center flex flex-col mt-14 w-[88%]"
         variants={fadeInUp(1.2)}
         initial="hidden"
         animate="visible"
       >
         <Card className="bg-white/90 backdrop-blur-md p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 text-right rtl">
           <h3 className="text-xl font-semibold mb-2">💡 הטיפ היומי</h3>
-          <div className="text-md text-muted-foreground">
+          <div className="text-lg text-muted-foreground">
             לפני שאתה קונה משהו – תן לו "לילה אחד". ראית אוזניות ב-399 נקודות?
             עזוב, תן לזה לילה. אם מחר אתה עדיין בקטע – תקנה. אם שכחת – הרווחת גם
             נקודות וגם שקט בנשמה. 😌
